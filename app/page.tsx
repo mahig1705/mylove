@@ -18,7 +18,7 @@ const alphabetContent = [
     word: "Brilliant",
     line1: "Your mind is a galaxy of ideas(all about me).",
     line2: "I love watching you dream big.",
-    imageUrl: "/images/b.jpg",
+    imageUrl: "/images/b.JPG",
   },
   {
     letter: "C",
@@ -46,14 +46,14 @@ const alphabetContent = [
     word: "Funny",
     line1: "You always know how to make me laugh.",
     line2: "Your humor is my favorite medicine.",
-    imageUrl: "/images/f.jpg",
+    imageUrl: "/images/f.JPG",
   },
   {
     letter: "G",
     word: "Genuine",
     line1: "You're honest, raw, and real.",
     line2: "Being real is your superpower.",
-    imageUrl: "/images/g.jpg",
+    imageUrl: "/images/g.JPG",
   },
   {
     letter: "H",
@@ -74,7 +74,7 @@ const alphabetContent = [
     word: "Joyful",
     line1: "Your smile is pure sunshine.",
     line2: "I feel lucky to see it every day.",
-    imageUrl: "/images/j.jpg",
+    imageUrl: "/images/j.JPG",
   },
   {
     letter: "K",
@@ -165,7 +165,7 @@ const alphabetContent = [
     word: "Warm",
     line1: "You make cold days feel like home.",
     line2: "Your hugs are the safest place I know.",
-    imageUrl: "/images/w.jpg",
+    imageUrl: "/images/w.JPG",
   },
   {
     letter: "X",
