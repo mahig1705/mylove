@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-dancing: "Dancing Script", cursive;
+  --font-great-vibes: "Great Vibes", cursive;
+  --font-shadows: "Shadows Into Light", cursive;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .font-dancing {
+    font-family: var(--font-dancing);
+  }
+
+  .font-great-vibes {
+    font-family: var(--font-great-vibes);
+  }
+
+  .font-shadows {
+    font-family: var(--font-shadows);
+  }
+}
+
+/* Flipbook specific styles */
+.page {
+  background-color: transparent;
+  user-select: none;
+  overflow: hidden;
+}
+
+.flipbook-shadow {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Custom flipbook library overrides */
+.stf__wrapper {
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.stf__block {
+  box-shadow: 0 20px 25px -5px rgba(139, 69, 19, 0.15), 0 10px 10px -5px rgba(139, 69, 19, 0.1) !important;
+}
+
+.stf__page {
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+
+.stf__page--left {
+  border-right: 1px solid rgba(139, 69, 19, 0.1) !important;
+}
+
+.stf__page--right {
+  border-left: 1px solid rgba(139, 69, 19, 0.1) !important;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .stf__wrapper {
+    width: 100% !important;
+    max-width: 350px !important;
+  }
+
+  .page {
+    font-size: 0.9rem;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-amber-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-amber-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-amber-500;
+}
+
+/* Prevent text selection during page flips */
+.stf__wrapper * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Smooth transitions for interactive elements */
+.page * {
+  transition: transform 0.3s ease;
+}
